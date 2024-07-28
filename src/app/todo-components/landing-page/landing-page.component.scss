@@ -1,0 +1,60 @@
+.background-image-container {
+    background-image: url("../../../assets/mountain.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    text-align: center;
+    color: white;
+    // overflow-y: hidden;
+}
+
+.centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* font-size: medium; */
+}
+
+.head {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    margin-bottom: 1em;
+    color: black;
+}
+
+.redbutton {
+    border: 2px;
+    color: white;
+    background-color: #de483a;
+    border-radius: 0.5rem;
+    width: 180px;
+    padding-top: 5px;
+    height: 35px;
+    top: 55%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 11%;
+}
+
+.top-right-text {
+    position: absolute;
+    top: 8px;
+    right: 1%;
+    color:#de483a;
+    font-size: 25px;
+}
+

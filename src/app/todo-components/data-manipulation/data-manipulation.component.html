@@ -1,0 +1,67 @@
+<div class="pos-f-t">
+    <nav class="navbar navbar-dark bg-dark">
+
+        <div class="row">
+            <div class="col">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" title="back to home"
+                    (click)="navigateHome()" data-target="#navbarToggleExternalContent"
+                    aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div style="margin-top: 3px;">
+                <h4 style="color: white;text-align: start;">TODO APPLICATION</h4>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<form [formGroup]="todoForm">
+    <div class="container">
+        <div class="row">
+            <div class="col" style="margin-top: 15px;">
+                <input id="street" type="text" formControlName="todoList" placeholder="Add todo">
+            </div>
+            <div class="col" style="margin-top: 15px;">
+                <input id="city" type="text" formControlName="todoDesc" placeholder="Add todo description">
+            </div>
+            <div class="col" style="margin-top: 10px;">
+                <button id="onSubmit" type="button"
+                    [ngClass]="buttonStr == 'Add Todo' ? 'btn btn-info' : 'btn btn-warning' "
+                    (click)="onSubmit()">{{buttonStr}}</button>
+            </div>
+            <div class="col" style="margin-top: 10px;">
+                <button id="onSubmit" type="button"
+                    class="btn btn-secondary"
+                    (click)="onClear()">Clear Todo</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+<div class="containerTab">
+    <tr>
+        <th style="width: 8vw;">Check</th>
+        <th style="width: 15vw;">ToDo List</th>
+        <th style="width: 30vw;">ToDo Description</th>
+        <th style="width: 30vw;">Status</th>
+        <th style="width: 15vw;">Edit</th>
+        <th style="width: 15vw;">Delete</th>
+    </tr>
+    <tr *ngFor="let item of dataList;let i=index">
+        <input style="margin-left: 25px;" type="checkbox" [(ngModel)]="item.status" id="vehicle{{i}}"
+            name="vehicle{{i}}" (change)="onCheck(i)">
+        <td>{{item.todo}}</td>
+        <td>{{item.desc}}</td>
+        <td> <button type="button"  
+                [ngClass]="item.status ? 'btn btn-success' : 'btn btn-danger'">{{item.status?'Completed': 'Pending'
+                }}</button>
+        </td>
+        <td> <button type="button" class="btn btn-primary" (click)="onEdit(item)">Edit Todo</button></td>
+        <td> <button type="button" class="btn btn-dark" (click)="onDelete(item)">Delete</button></td>
+    </tr>
+
+
+</div>

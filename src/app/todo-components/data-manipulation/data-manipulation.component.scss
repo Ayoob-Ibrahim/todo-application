@@ -1,0 +1,39 @@
+.container {
+    border: 2px solid grey;
+    margin-top: 50px;
+    height: 10vh;
+    margin-left: 100px;
+    display: flex;
+    justify-content: flex-start;
+    border-radius: 0.5rem;
+}
+
+.containerTab {
+    border: 2px solid grey;
+    margin-top: 50px;
+    height: 60vh;
+    margin-left: 100px;
+    border-radius: 0.9rem;
+    width: 84vw;
+    border-radius: 0.9rem;
+    max-height: 60vh; /* Set the maximum height as needed */
+    overflow-y: auto;
+}
+
+// table {
+//     font-family: arial, sans-serif;
+//     border-collapse: collapse;
+//     width: 100vw;
+// }
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
